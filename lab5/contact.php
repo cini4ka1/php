@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $to = "cool.dnevnik-ru2013@yandex.ru";
         $headers = 'From: admin@center.ogu' . "\r\n" .
-                   'Reply-To: admin@center.ogu' . "\r\n" .
+                   'Reply-To: kkrakov71@gmail.com' . "\r\n" .
                    'X-Mailer: PHP/' . phpversion();
 
         if (mail($to, $subject, $body, $headers)) {
