@@ -2,8 +2,15 @@
 declare(strict_types=1);
 
 /**
- * Автозагрузчик классов
+ * Автозагрузчик классов из пространства имён MyProject\Classes.
+ *
+ * Преобразует полное имя класса (например, MyProject\Classes\User)
+ * в путь к файлу (MyProject/Classes/User.php) и подключает его.
+ *
+ * @param string $className Полное имя класса с пространством имён.
+ * @return bool
  */
+
 spl_autoload_register(function ($className) {
     // Преобразуем пространство имен в путь к файлу
     $filePath = str_replace('MyProject\\Classes\\', 'MyProject/Classes/', $className) . '.php';
